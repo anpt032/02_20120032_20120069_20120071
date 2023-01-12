@@ -1,0 +1,20 @@
+{% extends "mainapp/base.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block content %}
+<form method="post" action="/search/" class="form-group">
+    {% csrf_token %}
+    <div class="input-group">
+        <div class="form-outline">
+        <input type="search" id="form1" name="content" class="form-control" />
+        <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="submit" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+        </button>
+    </div>
+</form>
+{% endblock %}

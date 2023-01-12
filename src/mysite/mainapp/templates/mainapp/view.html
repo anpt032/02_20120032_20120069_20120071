@@ -1,0 +1,39 @@
+{% extends 'mainapp/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}To Do{% endblock %}
+{% block content %}
+	<header>
+		<!-- <div class="tittle text-center">TODO LISTS</div> -->
+      
+		<h1><span>TODO</span> LISTS</h1>
+        
+		<form method="POST" class="form-group" action="/view/">
+			{% csrf_token %}
+			<!-- <div class="input-group mb-3">
+				{{form | crispy}}
+				<div class="input-group-prepend">
+					<button type="submit", name="create" class="btn btn-success">Create new</button>
+				</div>
+			</div> -->
+			<input 
+				type="text" 
+				name="new-task-input" 
+				id="new-task-input" 
+				placeholder="Add new list" />
+			<button 
+				type="submit"
+				id="new-task-submit" 
+				value="Add list">Create list</form>
+		</form>
+	</header>
+	<main>
+		<section class="task-list">
+			<!-- <h2>ToDo lists</h2> -->
+            {% for td in user.todolist.all %}
+			<div id="tasks">
+                <h2><a href="/{{td.id}}">{{td.name}}</a></h2>
+			</div>
+            {% endfor %}
+		</section>
+	</main>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SIGN IN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'mysite/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'mysite/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'mysite/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'mysite/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{% static 'mysite/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mysite/css/sign_in_up/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="post">
+					{% csrf_token %}
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-assignment-check"></i>
+					</span>
+					<span class="login100-form-title p-b-26">
+						Hello again !
+					</span>
+					<span class="login100-form-title-small p-b-20">
+						Welcome back
+					</span>
+				
+					{{ form|crispy }}
+					<!-- <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div> -->
+					
+                     <!-- <div class="form-group">
+                        <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                        <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                     </div> -->
+					
+					<!-- <p>Don't have an account? Create one <a href="/register">here</a></p> -->
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type='submit' class="login100-form-btn">
+								SIGN IN
+							</button>
+						</div>
+					</div>
+					
+					<!-- <span class="login100-form-title-social p-t-40 p-b-20">
+							or continue with
+						</span>
+					
+				    <div class="social-login flex-sb flex-w">
+						
+						
+						<a href="#" class="btn-google m-b-20">
+							<img src="{% static 'mysite/images/icons/icon-google.png' %}" alt="GOOGLE">
+							Google
+						</a>
+
+						<a href="#" class="btn-face m-b-20">
+							<i class="fa fa-facebook-official"></i>
+							Facebook
+						</a>
+
+					
+                    </div> -->
+
+					<div class="text-center p-t-80">
+						<span class="txt1">
+							Not a member ?
+						</span>
+
+						<a class="txt2" href="/register">
+							Register now
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'mysite/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+
+<!--===============================================================================================-->
+	<script src="{% static 'mysite/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'mysite/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+
+	<script src="{% static 'mysite/js/sign_in_up/main.js' %}"></script>
+
+</body>
+</html>

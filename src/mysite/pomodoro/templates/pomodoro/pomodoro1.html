@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro</title>
+</head>
+<body>  
+  <div id="countdown-container"></div>
+  <div id="cancel-container" hidden> 
+    <button id="cancel-button">Cancel</button>
+  </div>
+  <div id="video-container">
+  </div>
+  
+  <div id="selection-container">
+    <p id="instruction">Select Focus Minutes:</p>
+    <div id="time-buttons-container">
+      <button class="minute-button set-time" id="0.05">25</button>
+      <button class="minute-button set-time" id="50">50</button>
+      <button class="minute-button set-time" id="75">75</button>
+      <button class="minute-button set-time" id="100">100</button>
+    </div>
+    
+    <span class="take-break set-time" id="5" hidden>Take a Five-Minute Break</span>
+  </div>
+
+  <script src="{% static 'pomodoro/index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro</title>
+</head>
+<body>  
+  <div id="countdown-container"></div>
+  <div id="cancel-container" hidden> 
+    <button id="cancel-button">Cancel</button>
+  </div>
+  <div id="selection-container">
+    <p id="instruction">Enter Focus Minutes:</p>
+    <form>
+        <input name="time" value="25">
+        <button>Submit</button>
+    </form>
+  </div>
+
+  <script src="{% static 'pomodoro/index.js' %}"></script>
+</body>
+</html>
