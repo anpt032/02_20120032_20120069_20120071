@@ -15,3 +15,6 @@ Add content to notes: https://youtu.be/OygATk5LJy4
 ---------------------- Link GGDrive (Source code) ----------------
 
 https://drive.google.com/drive/folders/1VexmZ0nqcY6_D7lg3FQ6stMDtN6lDf1r?fbclid=IwAR35kdJ1MhL5tHByJoK5EfIlHTKeFYeV9EU6QCtIJB13Ll0-lJNlGD-6peQ
+
+---------------------- Link GGDrive (file zip của source code) ----------------
+https://drive.google.com/drive/folders/1S1AdhZBOuI_AehLMnpDRfgAUvqqzuy25?fbclid=IwAR3Y4BIDroJ787tOvef_LKjvEXa8xErhrLDYDPGnkfKx4aUa57Hf__ArUng
